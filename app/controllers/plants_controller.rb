@@ -1,37 +1,45 @@
 class PlanTsController < ApplicationController
 
-  # GET: /plan_ts
-  get "/plan_ts" do
-    erb :"/plan_ts/index.html"
-  end
+ # GET: /platns
+ get "/plants" do
+  if logged_in?
+     @user = User.find_by(session[:user_id])
+     @plants = @user.plants.all
+      erb :"/plants/index"
+  else
+      redirect '/login'
+end
+end
+# GET: /plants/new
+get "/plants/new" do
 
-  # GET: /plan_ts/new
-  get "/plan_ts/new" do
-    erb :"/plan_ts/new.html"
-  end
 
-  # POST: /plan_ts
-  post "/plan_ts" do
-    redirect "/plan_ts"
-  end
+  erb :"/plants/new"
+end
 
-  # GET: /plan_ts/5
-  get "/plan_ts/:id" do
-    erb :"/plan_ts/show.html"
-  end
-
-  # GET: /plan_ts/5/edit
-  get "/plan_ts/:id/edit" do
-    erb :"/plan_ts/edit.html"
-  end
-
-  # PATCH: /plan_ts/5
-  patch "/plan_ts/:id" do
-    redirect "/plan_ts/:id"
-  end
-
-  # DELETE: /plan_ts/5/delete
-  delete "/plan_ts/:id/delete" do
-    redirect "/plan_ts"
-  end
+# POST: /plants
+post "/plants" do
+  user = User.find_by(session[:user_id])
+  @plants = user.plants.create(params)
+  redirect "/plants/#{@plant.id}"
+end
+# GET: /plants/5
+get "/plants/:id" do
+  @plant = Plant.find_by_id(params[:id])
+  erb :"/plants/show"
+end
+# GET: /plants/5/edit
+get "/plants/:id/edit" do
+  erb :"/plants/edit"
+end
+# PATCH: /medicines/5
+patch "/plants/:id" do
+  redirect "/plants/:id"
+end
+# DELETE: /plants/5/delete
+delete "/plants/:id/delete" do
+  @plant = Plant.find_by_id(params[:id])
+  @plant.destroy
+  redirect "/users/plants"
+end
 end
