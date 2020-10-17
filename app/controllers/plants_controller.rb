@@ -20,7 +20,7 @@ end
 # POST: /plants
 post "/plants" do
   user = User.find_by(session[:user_id])
-  @plants = user.plants.create(params)
+  @plant = user.plants.create(params)
   redirect "/plants/#{@plant.id}"
 end
 # GET: /plants/5
@@ -32,7 +32,7 @@ end
 get "/plants/:id/edit" do
   erb :"/plants/edit"
 end
-# PATCH: /medicines/5
+# PATCH: /plants/5
 patch "/plants/:id" do
   redirect "/plants/:id"
 end
