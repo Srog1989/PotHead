@@ -35,7 +35,7 @@ end
 patch "/plants/:id" do
 @plant = Plant.find_by_id(params[:id])
   if params[:name] == "" || params[:light_needs] == "" || params[:water_needs] == ""
-    erb  :"/plants/edit.html/"
+    redirect :"/plants/edit.html/"
   else
     @plant.name = params[:name]
     @plant.light_needs = params[:light_needs]

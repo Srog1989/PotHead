@@ -52,41 +52,33 @@ get '/logout' do
     erb :'/users/login.html'
 end
   
-  
-  
-  
-  
-  
-  # GET: /users
-  get "/users" do
-    erb :"/users/index.html"
-  end
-  # GET: /users/new
-  get "/users/new" do
-    @user = User.create(username: params[:username], password: params[:password])
-    @user.save
-    erb :"/users/new.html"
-  end
-  # POST: /users
-  post "/users" do
-    # user = User.find_by_id(session[:user_id])
-    # redirect "/plants/"
-    # redirect "/users"
-  end
   # GET: /users/5
   get "/users/:id" do
+    @user = User.find_by_id(params[:id])
     erb :"/users/show.html"
   end
   # GET: /users/5/edit
   get "/users/:id/edit" do
+    @user = User.find_by_id(params [:id])
     erb :"/users/edit.html"
   end
   # PATCH: /users/5
   patch "/users/:id" do
-    redirect "/users/:id"
+    @user = User.find(params[:id])
+    if params[:username] == "" || params[:password] == ""
+      redirect :"/users/edit.html/"
+    else
+      @user.username = params[:username]
+      @user.password = params[:password]
+      @user.save
+      redirect "/users/#{@user.id}"
   end
+end
   # DELETE: /users/5/delete
   delete "/users/:id/delete" do
-    redirect "/users"
+      @user = User.find(params[:id])
+      #Flash error "Are you sure you want to delete this user? Doing so will delete all contents of this profile?"
+      @user.destroy
+      redirect "/signup"
   end
 end
