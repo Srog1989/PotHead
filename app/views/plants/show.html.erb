@@ -9,19 +9,22 @@
     <div class="content">
       <h3><%= "Light Needs:#{@plant.light_needs}"%><h3>
       <h3><%= "Water Needs:#{@plant.water_needs}"%><h3>
-
+      
    <form action="/plants/<%= @plant.id %>/delete" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete">
     </form>
+
+
     </div>
 
 
     <div class="sidebar">
       <h3>Links</h3>
-      <li><b><br><a href="/plants/<%=@plant.id%>/edit">Edit this Plant</a><br></li>
+      
         <li><b><br><a href="/plants/new">Grow Your Garden</a><br><li>
         <li><b><br><a href="/plants">All Plants</a><br></li>
+        <li><b><br><a href=<%="/users/#{@user.id}"%>>View My Account</a><br></li>
          <li><b><br><a href="/logout">Log Out</a><br></li>
       </ul>
     </div>

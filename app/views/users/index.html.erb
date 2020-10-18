@@ -5,7 +5,7 @@
   <div class="col-md-8 col-md-offset-2">
    <h1>Update your account information here, <%= @user.username %>!</h1>
     <div class="content">
-       <p><% @users.each do |plant| %>
+       <p><% @users.each do |user| %>
         <h1><%= "#{user.username}"%></h1>
         <li><b><br><a href= <%="/users/#{user.id}"%>>My Account</a><br></li>
         <% end %></p>

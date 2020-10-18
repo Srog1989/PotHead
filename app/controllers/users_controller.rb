@@ -13,7 +13,7 @@ post '/signup' do
     if params[:username] == "" || params[:password] == ""
         redirect "/signup"
     else
-        user =User.create(:username => params[:username], :password => params[:password])
+        user =User.new(:username => params[:username], :password => params[:password])
         if user.save
             session[:user_id] = user.id
             redirect "/plants"
@@ -38,9 +38,10 @@ post "/login" do
         redirect "/login"
     else 
         user = User.find_by(username: params[:username])
-        if user.save
+        if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             redirect "/plants"
+            #flasherror could go here
         else
             redirect "/login"
         end
@@ -59,12 +60,12 @@ end
   end
   # GET: /users/5/edit
   get "/users/:id/edit" do
-    @user = User.find_by_id(params [:id])
+    @user = User.find_by_id(params[:id])
     erb :"/users/edit.html"
   end
   # PATCH: /users/5
   patch "/users/:id" do
-    @user = User.find(params[:id])
+    @user = User.find_by_id(params[:id])
     if params[:username] == "" || params[:password] == ""
       redirect :"/users/edit.html/"
     else
@@ -78,6 +79,7 @@ end
   delete "/users/:id/delete" do
       @user = User.find(params[:id])
       #Flash error "Are you sure you want to delete this user? Doing so will delete all contents of this profile?"
+      session.clear
       @user.destroy
       redirect "/signup"
   end

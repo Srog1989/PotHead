@@ -120,11 +120,11 @@
 
 /* A link that has not been visited */
 a:link {
-  color: rgb(209, 107, 124);
+  color: rgb(15, 15, 15);
 }
 /* A link that has been visited */
 a:visited {
-  color: black;
+  color: rgb(109, 91, 91);
 }
 /* A link that is hovered on */
 a:hover {
