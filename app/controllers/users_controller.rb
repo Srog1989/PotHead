@@ -4,7 +4,7 @@ class UseRsController < ApplicationController
     if logged_in?
         redirect to '/plants'
     else 
-        erb :'users/signup'
+        erb :'users/signup.html'
     end 
 end 
 
@@ -28,7 +28,7 @@ get "/login" do
     if logged_in?
         redirect to '/plants'
     else
-    erb :"users/login"
+    erb :"users/login.html"
     end
 end
 
@@ -49,7 +49,7 @@ end
 
 get '/logout' do
     session.clear
-    erb :'/users/login'
+    erb :'/users/login.html'
 end
   
   

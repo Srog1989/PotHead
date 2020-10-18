@@ -1,20 +1,17 @@
-<h1>This is the Model's index page.</h1>
-
-
 
   <div class="container">
   <header><></header>
   <div class="col-md-8 col-md-offset-2">
-   <h1>Welcome, <%= @user.username %></h1>
+   <h1>Welcome To Your Garden, <%= @user.username %>!</h1>
     <div class="content">
-       <p><% @medicines.each do |medicine| %>
-        <h1><%= "#{medicine.name}"%></h1>
-        <li><b><br><a href= <%="/medicines/#{medicine.id}"%>>Medicine Info</a><br></li>
+       <p><% @plants.each do |plant| %>
+        <h1><%= "#{plant.name}"%></h1>
+        <li><b><br><a href= <%="/plants/#{plant.id}"%>>Plant Info</a><br></li>
         <% end %></p>
     </div>
     <div class="sidebar">
       <h3>Links</h3>
-        <li><b><br><a href="/medicines/new">Add New Medicine</a><br><li>
+        <li><b><br><a href="/plants/new">Grow Your Garden(add a plant)</a><br><li>
          <li><b><br><a href="/logout">Log Out</a><br></li>
       </ul>
     </div>

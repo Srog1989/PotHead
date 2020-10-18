@@ -1,4 +1,4 @@
-<h1>This is the show page for an individual instance of your model.</h1>
+<h1>Plant Profile.</h1>
 
 <div class="container">
   <header><></header>
@@ -10,13 +10,10 @@
       <h3><%= "Light Needs:#{@plant.light_needs}"%><h3>
       <h3><%= "Water Needs:#{@plant.water_needs}"%><h3>
 
-
    <form action="/plants/<%= @plant.id %>/delete" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" value="delete">
+    <input type="submit" value="Delete">
     </form>
-
-
     </div>
 
 
