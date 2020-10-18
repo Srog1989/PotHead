@@ -1,7 +1,7 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
+<h1>Make Changes To Your Plant Here.</h1>
 
 <form action="/plants/<%= @plant.id %>" method="post">
-<input id="hidden" type="hidden" name="_method" value="delete">
+<input id="hidden" type="hidden" name="_method" value="patch">
 <br>Name:<input type= "text" name = "name" id = "name"><br>
 <br>Light Needs:<input type = "text" name = "light_needs" id = "light_needs"><br>
 <br>Water Needs:<input type = "text" name = "water_needs" id = "water_needs"><br>

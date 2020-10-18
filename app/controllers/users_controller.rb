@@ -63,11 +63,15 @@ end
   end
   # GET: /users/new
   get "/users/new" do
+    @user = User.create(username: params[:username], password: params[:password])
+    @user.save
     erb :"/users/new.html"
   end
   # POST: /users
   post "/users" do
-    redirect "/users"
+    # user = User.find_by_id(session[:user_id])
+    # redirect "/plants/"
+    # redirect "/users"
   end
   # GET: /users/5
   get "/users/:id" do

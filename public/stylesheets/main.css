@@ -117,3 +117,20 @@
   top: 2rem;
   right: 2rem;
 }
+
+/* A link that has not been visited */
+a:link {
+  color: rgb(209, 107, 124);
+}
+/* A link that has been visited */
+a:visited {
+  color: black;
+}
+/* A link that is hovered on */
+a:hover {
+  color: rgb(65, 129, 182);
+}
+/* A link that is selected */
+a:active {
+  color: rgb(71, 92, 71);
+}
