@@ -12,8 +12,8 @@
   <div class="white absolute heading-overlay7">
     <% @plants.each do |plant| %>
       <div class="plant-display">
-        <h3><%= "#{plant.name}" %></h3>
-<a href= <%="/plants/#{plant.id}"%> class="white">Plant Info</a>      </div>
+        <h3><a href= <%="/plants/#{plant.id}"%> class="white"><%= "#{plant.name}" %></a></h3>
+      </div>
     <% end %>
   </div>
 </div>

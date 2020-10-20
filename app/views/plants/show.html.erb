@@ -1,32 +1,18 @@
-<h1>Plant Profile.</h1>
-
 <div class="container">
-  <header><></header>
-  <div class="col-md-8 col-md-offset-2">
-    <h2><%= "#{@plant.name}"%></h2>
-
-
-    <div class="content">
-      <h3><%= "Light Needs:#{@plant.light_needs}"%><h3>
-      <h3><%= "Water Needs:#{@plant.water_needs}"%><h3>
-      
-   <form action="/plants/<%= @plant.id %>/delete" method="post">
-    <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete">
-    </form>
-
-
-    </div>
-
-
-    <div class="sidebar">
-      <h3>Links</h3>
-      
-        <li><b><br><a href="/plants/<%= @plant.id %>/edit">Edit This Plant</a><br><li>
-        <li><b><br><a href="/plants/new">Grow Your Garden</a><br><li>
-        <li><b><br><a href="/plants">All Plants</a><br></li>
-        <%# <li><b><br><a href=<%="/users/#{@user.id}"%>>View My Account</a><br></li> %>
-         <li><b><br><a href="/logout">Log Out</a><br></li>
-      </ul>
-    </div>
-  </div>
+  <header class="relative show-bg">
+    <h1 class="white absolute heading-overlay">Plant Profile</h1>
+    <h3 class="white absolute heading-overlay4"><%= "#{@plant.name}"%><br>
+      <%= "Name:#{@plant.name}"%><br>
+      <%= "Light_needs:#{@plant.light_needs}"%><br>
+      <%= "Water_needs:#{@plant.water_needs}"%><br>
+    </h3>
+  
+    <div class="sidebarss">
+      <h3 class=absolute heading-overlay>Links</h3><br>
+        <li><b><br><a href="/plants/<%=@plant.id%>/edit" class="grey" >Edit this plant</a><br></li>
+        <li><b><br><a href="/plants/new"class="grey" >Grow Your Garden</a><br><li>
+        <li><b><br><a href="/logout" class="grey" >Log Out</a><br></li>
+        <li><b><br><a href="/plants" class="grey" >View Your Garden</a><br></li>
+    </div> 
+  </header>
+</div>

@@ -171,6 +171,11 @@
   top: 8rem;
   left: 12rem;
 }
+
+.heading-overlay13 {
+  top: 9rem;
+  right: 6rem;
+}
 .black {
   color: black;
 }
@@ -185,6 +190,12 @@
   height: 750px;
   background-size: cover;
 }
+
+.edit-bg{
+  background: url("../images/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg") no-repeat right top;
+  height: 600px;
+  background-size: cover;
+}
 .mountain2-bg{
   background: url("../images/paula-vermeulen-_f2m3mEkaaU-unsplash.jpg") no-repeat right top;
   height: 600px;
@@ -194,6 +205,12 @@
 .index-bg{
   background: url("../images/nikhil-mitra-e40kDwUKYwQ-unsplash.jpg") no-repeat right top;
   height: 600px;
+  background-size: cover;
+}
+
+.show-bg{
+  background: url("../images/alexandra-lammerink-vx4ZaLWXI0g-unsplash.jpg") no-repeat right top;
+  height: 1750px;
   background-size: cover;
 }
 .plant-display {

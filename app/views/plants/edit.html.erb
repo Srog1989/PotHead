@@ -1,15 +1,24 @@
-<h1>Make Changes To Your Plant Here.</h1>
-
-<form action="/plants/<%= @plant.id %>" method="post">
-<input id="hidden" type="hidden" name="_method" value="patch">
-<br>Name:<input type= "text" name = "name" id = "name"><br>
-<br>Light Needs:<input type = "text" name = "light_needs" id = "light_needs"><br>
-<br>Water Needs:<input type = "text" name = "water_needs" id = "water_needs"><br>
-<br><input type = "submit" value ="Save Changes"><br>
-</form>
-
-
+<div class="container">
+<header class="relative edit-bg">
+  <h1 class="black absolute heading-overlay">Make Changes To Your Plant Here</h1>
+    <h3 class="black absolute heading-overlay13">
+    <form action= <%="/plants/#{@plant.id}"%> method= "post">
+        <input id="hidden" type="hidden" name="_method" value="patch">
+            <label>Plant Name<label><br>
+            <input type = "text" name = "name"id = "name" value=<%= "#{@plant.name}"%>>
+            <br><label>Light Needs<label><br>
+            <input type = "text" name = "light_needs"id = "light_needs" value=<%="#{@plant.light_needs}"%> >
+            <br><label>Water Needs<label><br>
+            <input type = "text" name = "water_needs"id = "water_needs" value=<%="#{@plant.water_needs}"%>>
+            <input type= submit value= "Save Changes" class="black">
+        </form>
+   </h3>
+  <div class="sidebarss">
+    <h3 class=absolute heading-overlay>Links</h3><br>
+      <li><b><br><a href="/plants" class="grey" >All Plants</a><br></li>
 <form action="/plants/<%= @plant.id %>/delete" method="post">
 <input id="hidden" type="hidden" name="_method" value="delete">
 <input type="submit" value="Delete This Plant">
 </form>
+  </div> 
+</div>
