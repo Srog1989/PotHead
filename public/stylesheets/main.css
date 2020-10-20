@@ -190,7 +190,13 @@
   height: 600px;
   background-size: cover;
 }
-.coin-display {
+
+.index-bg{
+  background: url("../images/nikhil-mitra-e40kDwUKYwQ-unsplash.jpg") no-repeat right top;
+  height: 600px;
+  background-size: cover;
+}
+.plant-display {
   margin-bottom: 2rem;
 }
 .small-text{
@@ -203,7 +209,7 @@
 }
 /* A link that has not been visited */
 a:link {
-  color: rgb(15, 15, 15);
+  color: rgb(248, 244, 244);
 }
 /* A link that has been visited */
 a:visited {
@@ -211,7 +217,7 @@ a:visited {
 }
 /* A link that is hovered on */
 a:hover {
-  color: rgb(65, 129, 182);
+  color: rgb(214, 224, 116);
 }
 /* A link that is selected */
 a:active {
