@@ -5,7 +5,7 @@ class PlanTsController < ApplicationController
   if logged_in?
      @user = User.find_by_id(session[:user_id])
      @plants = @user.plants.all
-      erb :"/plants/index.html"
+      erb :"/plants/index2.html"
   else
       redirect '/login'
 end

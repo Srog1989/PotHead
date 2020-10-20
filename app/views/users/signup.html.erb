@@ -1,10 +1,13 @@
 
-<h1>This is the signup page for your model.</h1>
-<h3>Sign Up</h3>
-<form action="/signup" method="POST">
-  <input type="text" name="username" placeholder="Username:">
-  <input type="password" name="password" placeholder="Password:">
-  <input type="submit" value="Sign Up">
-</form>
-<br>Already a member?<br>
-<a href="/login">Log In</a>
+<div class="container">
+<header class="relative snake-bg">
+  <h1 class="white absolute heading-overlay">Welcome, please sign up here</h1>
+  <h3 class="grey absolute heading-overlay3">Sign Up
+    <form action="/signup" method="POST">
+      <input type="text" name="username" placeholder="Username:">
+      <input type="password" name="password" placeholder="Password:">
+      <input type="submit" value="Sign Up">
+      <br><h6><a href="/login"class="white">Already a member? Login </a></h6>
+    </form>
+  </h3>
+</div>

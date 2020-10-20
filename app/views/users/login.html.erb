@@ -1,20 +1,12 @@
-<h1>Welcome, Pot Head! Please log in!</h1>
-<br><br>
-<form method = "post" action= "/login">
-
-Username:<input type= "text" name = "username">
-<br>
-<br>
-<br>
-Password:<input type = "text" name = "password">
-
-<input type = "submit" value = "Login">
-
-<br><br>
-<br><br>
-
-
-
-Not a member? We're happy you're here, click here to
-
-<a href="/signup">Sign Up</a>
+<div class="container">
+<header class="relative snake-bg">
+  <h1 class="white absolute heading-overlay">Welcome back, Pot Head!</h1>
+  <h3 class="grey absolute heading-overlay3">Log In
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Username:">
+      <input type="password" name="password" placeholder="Password:">
+      <input type="submit" value="Login">
+      <br><h6><a href="/signup"class="white">Not a member? We're happy you're here, click here to signup</a></h6>
+    </form>
+  </h3>
+</div>
