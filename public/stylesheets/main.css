@@ -196,21 +196,16 @@
   height: 600px;
   background-size: cover;
 }
-.mountain2-bg{
-  background: url("../images/paula-vermeulen-_f2m3mEkaaU-unsplash.jpg") no-repeat right top;
-  height: 600px;
-  background-size: cover;
-}
 
 .index-bg{
-  background: url("../images/nikhil-mitra-e40kDwUKYwQ-unsplash.jpg") no-repeat right top;
+  background: url("../images/jackie-tsang-ygqrqAbWUoc-unsplash.jpg") no-repeat right top;
   height: 600px;
   background-size: cover;
 }
 
 .show-bg{
-  background: url("../images/alexandra-lammerink-vx4ZaLWXI0g-unsplash.jpg") no-repeat right top;
-  height: 1750px;
+  background: url("../images/annie-spratt-zu-OdjJRa0w-unsplash.jpg") no-repeat right top;
+  height: 700px;
   background-size: cover;
 }
 .plant-display {
@@ -219,22 +214,17 @@
 .small-text{
   font-size: .75rem;
 }
-.coin-details-bg{
-  background: url("../images/andre-francois-mckenzie-Q4W8GjjKjuw-unsplash.jpg") no-repeat right top;
-  height: 650px;
-  background-size: cover;
-}
 /* A link that has not been visited */
 a:link {
-  color: rgb(248, 244, 244);
+  color: rgb(76, 151, 173);
 }
 /* A link that has been visited */
 a:visited {
-  color: rgb(109, 91, 91);
+  color: rgb(167, 165, 69);
 }
 /* A link that is hovered on */
 a:hover {
-  color: rgb(214, 224, 116);
+  color: rgb(73, 78, 28);
 }
 /* A link that is selected */
 a:active {

@@ -58,11 +58,13 @@ end
     @user = User.find_by_id(params[:id])
     erb :"/users/show.html"
   end
+
   # GET: /users/5/edit
   get "/users/:id/edit" do
     @user = User.find_by_id(params[:id])
     erb :"/users/edit.html"
   end
+
   # PATCH: /users/5
   patch "/users/:id" do
     @user = User.find_by_id(params[:id])

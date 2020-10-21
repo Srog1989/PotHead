@@ -1,15 +1,19 @@
-
-<h3>Please enter the name of the new plant you would like to add.</h3>
-<br>
-<br>
-<form method = "post" action= "/plants">
-
-Name:<input type= "text" name = "name" id = "name">
-<br>
-<br>
-Light Needs:<input type = "text" name = "light_needs" id = "light_needs">
-<br>
-<br>
-Water Needs:<input type = "text" name = "water_needs" id = "water_needs">
-
-<input type = "submit" value = "Continue">
+<div class="container">
+<header class="relative edit-bg">
+  <h1 class="black absolute heading-overlay">Add a plant to grow your garden.</h1>
+    <h3 class="black absolute heading-overlay13">
+    <form action= "/plants" method= "post">
+            <label>Plant Name<label><br>
+            <input type = "text" name = "name" id = "name">
+            <br><label>Light Needs<label><br>
+            <input type = "text" name = "light_needs"id = "light Needs">
+            <br><label>Water Needs<label><br>
+            <input type = "text" name = "water_needs"id = "Water Needs">
+            <input type= submit value= "Save Changes" class="black">
+        </form>
+   </h3>
+  <div class="sidebarss">
+    <h3 class=absolute heading-overlay>Links</h3><br>
+      <li><b><br><a href="/plants" class="grey" >View Your Garden</a><br></li>
+  </div> 
+</div>
