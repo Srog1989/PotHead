@@ -1,11 +1,11 @@
 <div class="container">
   <header class="white relative index-bg">
     <%# <h1 class="black absolute heading-overlay">Crypto Investments</h1> %>
-    <h1>Welcome To Your Garden, <%= @user.username %>!</h1>
+    <h1>Welcome To Your Garden, <%= current_user.username %>!</h1>
     <div class="sidebarsss">
       <h3 class=absolute heading-overlay>Links</h3><br>
        <li><b><br><a href="/plants/new">Grow Your Garden(add a plant)</a><br><li>
-       <li><b><br><a href=<%="/users/#{@user.id}"%>>View My Account</a><br></li>
+       <li><b><br><a href=<%="/users/#{current_user.id}"%>>View My Account</a><br></li>
          <li><b><br><a href="/logout">Log Out</a><br></li>
     </div> 
   </header>

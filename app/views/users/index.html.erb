@@ -3,7 +3,7 @@
   <div class="container">
   <header><></header>
   <div class="col-md-8 col-md-offset-2">
-   <h1>Update your account information here, <%= @user.username %>!</h1>
+   <h1>Update your account information here, <%= current_user.username %>!</h1>
     <div class="content">
        <p><% @users.each do |user| %>
         <h1><%= "#{user.username}"%></h1>

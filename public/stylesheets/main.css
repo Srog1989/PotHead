@@ -75,7 +75,8 @@
     font-size: 14px;
   }
   .main-image{
-    width:  100%
+    height: 500px;
+    background-size: cover;
   }
   .branding {
     clear: both;
@@ -198,7 +199,7 @@
 }
 
 .index-bg{
-  background: url("../images/jackie-tsang-ygqrqAbWUoc-unsplash.jpg") no-repeat right top;
+  background: url("../images/freddie-marriage-UcfKYTan-LU-unsplash.jpg") no-repeat right top;
   height: 600px;
   background-size: cover;
 }

@@ -1,5 +1,5 @@
 <h1>Insert the form to edit an instance of your model here.</h1>
-<form action="/users/<%= @user.id %>" method="post">
+<form action="/users/<%= current_user.id %>" method="post">
 <input id="hidden" type="hidden" name="_method" value="patch">
 <br>Username:<input type= "text" name = "username" id = "username"><br>
 <br>Password:<input type = "text" name = "password" id = "password"><br>

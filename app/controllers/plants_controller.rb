@@ -3,8 +3,8 @@ class PlanTsController < ApplicationController
  # GET: /platns
  get "/plants" do
   if logged_in?
-     @user = User.find_by_id(session[:user_id])
-     @plants = @user.plants.all
+     current_user
+     @plants = current_user.plants.all
       erb :"/plants/index.html"
   else
       redirect '/login'
@@ -29,9 +29,16 @@ get "/plants/:id" do
 end
 # GET: /plants/5/edit
 get "/plants/:id/edit" do
+  # need to prevent a user from editing another users plants
+  #if object matches user_id it will allow to edit 
   @plant = Plant.find_by_id(params[:id])
-  erb :"/plants/edit.html"
+  if @plant.user_id != current_user.id
+  redirect :"/plants"
+  else
+    erb :"/plants.edit.html"
+  end
 end
+
 # PATCH: /plants/5
 patch "/plants/:id" do
 @plant = Plant.find(params[:id])
