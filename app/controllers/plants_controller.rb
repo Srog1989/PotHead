@@ -29,13 +29,11 @@ get "/plants/:id" do
 end
 # GET: /plants/5/edit
 get "/plants/:id/edit" do
-  # need to prevent a user from editing another users plants
-  #if object matches user_id it will allow to edit 
   @plant = Plant.find_by_id(params[:id])
-  if @plant.user_id != current_user.id
-  redirect :"/plants"
+  if @plant.user_id.to_i != current_user.id
+    redirect "/plants"
   else
-    erb :"/plants.edit.html"
+    erb :"/plants/edit.html"
   end
 end
 
