@@ -15,7 +15,10 @@
    </h3>
   <div class="sidebarss">
     <h3 class=absolute heading-overlay>Links</h3><br>
-      <li><b><br><a href="/plants" class="grey" >All Plants</a><br></li>
+      <li><b><br><a href="/plants">All Plants</a><br></li>
+      <li><b><br><a href="/plants/:id/delete">Delete This Plant</a><br></li>
+
+
 <form action="/plants/<%= @plant.id %>/delete" method="post">
 <input id="hidden" type="hidden" name="_method" value="delete">
 <input type="submit" value="Delete This Plant">

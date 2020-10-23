@@ -33,7 +33,6 @@ get "/login" do
 end
 
 post "/login" do 
-    # binding.pry
     if params[:username] == "" || params[:password] == "" 
         redirect "/login"
     else 
@@ -55,19 +54,19 @@ end
   
   # GET: /users/5
   get "/users/:id" do
-    @user = User.find_by_id(params[:id])
+    @user = User.find(params[:id])
     erb :"/users/show.html"
   end
 
   # GET: /users/5/edit
   get "/users/:id/edit" do
-    @user = User.find_by_id(params[:id])
+    @user = User.find(params[:id])
     erb :"/users/edit.html"
   end
 
   # PATCH: /users/5
   patch "/users/:id" do
-    @user = User.find_by_id(params[:id])
+    @user = User.find(params[:id])
     if params[:username] == "" || params[:password] == ""
       redirect :"/users/edit.html/"
     else

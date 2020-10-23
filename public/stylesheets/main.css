@@ -212,7 +212,7 @@
   margin-bottom: 2rem;
 }
 .small-text{
-  font-size: .75rem;
+  font-size: 1.1rem;
 }
 /* A link that has not been visited */
 a:link {
@@ -229,4 +229,9 @@ a:hover {
 /* A link that is selected */
 a:active {
   color: rgb(71, 92, 71);
+}
+
+.welcome-text {
+  font-size: 12px;
+  line-height: 24px;
 }

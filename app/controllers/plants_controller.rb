@@ -10,6 +10,7 @@ class PlanTsController < ApplicationController
       redirect '/login'
 end
 end
+
 # GET: /plants/new
 get "/plants/new" do
   erb :"/plants/new.html"
@@ -22,7 +23,6 @@ post "/plants" do
   else @plant = current_user.plants.create(params)
   erb :"/plants/show.html"
 end
-  redirect "/plants/new"
 end
 
 # GET: /plants/5
@@ -54,9 +54,10 @@ patch "/plants/:id" do
     redirect "/plants/#{@plant.id}"
 end
 end
+
 # DELETE: /plants/5/delete
 delete "/plants/:id/delete" do
-  @plant = Plant.find_by_id(params[:id])
+  @plant = Plant.find(params[:id])
   @plant.destroy
   redirect "/plants"
 end
