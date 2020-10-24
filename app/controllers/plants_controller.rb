@@ -3,7 +3,6 @@ class PlanTsController < ApplicationController
  # GET: /platns
  get "/plants" do
   if logged_in?
-     current_user
      @plants = current_user.plants.all
       erb :"/plants/index.html"
   else
